@@ -1,0 +1,157 @@
+body {
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: 'Arvo', serif;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 60%;
+}
+
+.carousel {
+  width: 40%;
+  height: 100vh;
+  background: url("sample.jpg") no-repeat center center;
+}
+
+.thumbnail {
+  display: none;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  background: url("logo.jpg") no-repeat center center;
+
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.box p {
+  font-size: 25px;
+}
+
+.box button {
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: inherit;
+  color: black;
+  padding: 5px;
+  margin: 5px auto;
+  float: left;
+}
+
+.box1 {
+  background-color:#00796B;
+  width: 66%;
+}
+
+.box2 {
+  background-color:#B2DFDB;
+  width: 33%;
+}
+
+.box3 {
+  background-color:#009688;
+  width: 33%;
+}
+
+.box4 {
+  background-color:#B2DFDB;
+  width: 33%;
+}
+
+.box5 {
+  background-color:#00796B;
+  width: 33%;
+}
+
+.box6 {
+  background-color:#607D8B;
+  width: 33%;
+}
+
+.box7 {
+  background-color:#009688;
+  width: 33%;
+}
+
+.box8 {
+  background-color:#607D8B;
+  width: 33%;
+}
+
+.icon {
+  width: 20%;
+  padding: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 765px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .carousel {
+    display: none;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .thumbnail {
+    display: block;
+    background: url("logo.jpg") no-repeat center center;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+  }
+
+  .box3, .box4, .box5, .box6, .box7, .box8 {
+    width: 33%;
+    height: 33%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1, p {
+    display: none;
+  }
+
+  .box1 {
+    width: 100%;
+  }
+  .box2, .box3, .box4, .box5, .box6, .box7, .box8 {
+    width: 50%;
+  }
+}
