@@ -1,34 +1,41 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: row-reverse;
   font-family: 'Arvo', serif;
   color: white;
+  text-transform: uppercase;
+}
+
+.carousel {
+  flex: 1 1 50%;
+  background: url(images/sample.jpg) no-repeat 65% center;
+  background-size: cover;
 }
 
 .container {
   display: flex;
+  flex: 1 1 50%;
   flex-wrap: wrap;
-  height: 100vh;
-  width: 60%;
-}
-
-.carousel {
-  width: 40%;
-  height: 100vh;
-  background: url("sample.jpg") no-repeat center center;
 }
 
 .thumbnail {
   display: none;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
   border-radius: 15px;
-  background: url("logo.jpg") no-repeat center center;
-
+  background: url(images/logo.jpg) no-repeat center;
+  background-size: cover;
 }
 
 .box {
   display: flex;
+  flex: 1 1 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -40,139 +47,62 @@ body {
 }
 
 .box p {
-  font-size: 25px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.buttons {
+  margin-top: 15px;
 }
 
 .box button {
-  text-decoration: none;
-  border: 1px solid black;
+  padding: 10px 20px;
   background-color: inherit;
+  border: 1px solid black;
   color: black;
-  padding: 5px;
-  margin: 10px auto;
+  text-transform: uppercase;
 }
 
-.box1 {
+button:first-child {
+  margin-right: 10px;
+}
+
+.heading-content {
+  padding: 10px;
+}
+
+#heading-box,
+.downloads {
   background-color:#00796B;
-  width: 66.666%;
 }
 
-.box2 {
+.profile,
+.stream {
   background-color:#B2DFDB;
-  width: 33.333%;
 }
 
-.box3 {
+.tour,
+.portfolio {
   background-color:#009688;
-  width: 33.333%;
 }
 
-.box4 {
-  background-color:#B2DFDB;
-  width: 33.333%;
-}
-
-.box5 {
-  background-color:#00796B;
-  width: 33.333%;
-}
-
-.box6 {
+.social,
+.blog {
   background-color:#607D8B;
-  width: 33.333%;
-}
-
-.box7 {
-  background-color:#009688;
-  width: 33.333%;
-}
-
-.box8 {
-  background-color:#607D8B;
-  width: 33.333%;
 }
 
 .icon {
-  width: 20%;
-  padding: 10px;
+  width: 75px;
+  height: 75px;
   color: white;
 }
 
-@media screen and (max-width: 765px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .container {
-    width: 100%;
+@media screen and (max-width: 860px) {
+  .thumbnail {
+    display: block;
   }
-
   .carousel {
     display: none;
-  }
-
-  h1 {
-    display: none;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-  .thumbnail {
-    display: block;
-    background: url("logo.jpg") no-repeat center center;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    margin: 10px auto;
-  }
-
-  .box {
-    margin-bottom: 1px;
-    font-size: 15px;
-  }
-
-  .box3, .box4, .box5, .box6, .box7, .box8 {
-    width: 33.333%;
-    height: 33.333%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  body {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .thumbnail {
-    display: block;
-    justify-content: center;
-    align-items: center;
-  }
-
-  h1, p {
-    display: none;
-  }
-
-  .box {
-  margin-bottom: 1px;
-  }
-
-  .box1 {
-    width: 66.666%;
-  }
-
-  .box2 {
-    width: 33.333%;
-  }
-
-  .box3, .box4, .box5, .box6, .box7, .box8 {
-    width: 50%;
-  }
-
-  .icon {
-    width: 15%;
   }
 }
